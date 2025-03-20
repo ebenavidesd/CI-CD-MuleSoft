@@ -9,6 +9,7 @@ paths:
     servers:
       - url: https://ntoretail.com/api/shipping
     get:
+      operationId: Get Tracking information
       parameters:
       - name: email
         required: true
