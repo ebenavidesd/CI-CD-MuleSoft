@@ -30,15 +30,12 @@ jobs:
       with:
         node-version: '20'
         
-    - name: Get Rulesets & Install Dependencies
+    - name: Set up Rulesets & Install Dependencies
       run: |
-        curl -sL https://github.com/ebenavidesd/exchange-evaluation/archive/main.tar.gz -o exchange-evaluation.tar.gz
-        tar -xvf exchange-evaluation.tar.gz
-        cd exchange-evaluation-main/scripts
+        cd evaluations/scripts
         npm install 
         cd ../../
-        ls
-        mv exchange-evaluation-main /tmp/exchange-evaluation
+        mv evaluations /tmp/exchange-evaluation
         
     - name: Install Anypoint CLI
       run: |
